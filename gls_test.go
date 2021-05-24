@@ -43,6 +43,10 @@ func TestContextGo(t *testing.T) {
 		if _, ok := pprof.Label(newCtx, glsLabel); !ok {
 			t.Error("missing glsLabel")
 		}
+		newCtx = context.WithValue(newCtx, "k1", "v1")
+		if _, ok := pprof.Label(newCtx, glsLabel); !ok {
+			t.Error("missing glsLabel")
+		}
 		if v, ok := Get("my:key3"); ok {
 			s = v.(string)
 		}

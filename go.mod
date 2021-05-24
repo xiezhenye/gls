@@ -1,3 +1,3 @@
 module github.com/xiezhenye/gls
 
-go 1.14
+go 1.11
