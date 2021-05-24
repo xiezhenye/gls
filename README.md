@@ -61,9 +61,9 @@ import (
 
 func main() {
 	gls.Set("key1", "value1")
-    gls.Go(func() {
+	gls.Go(func() {
 		fmt.Println(gls.Get("key1"))
-    })
+	})
 	
 	// with context
 	ctx := gls.AttachGls(context.Background())
